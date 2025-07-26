@@ -1,30 +1,211 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BioGuard-CI | L'IA au service de la biodiversité ivoirienne</title>
-    <meta name="description" content="Suite d'intelligence artificielle pour protéger la biodiversité de Côte d'Ivoire : surveillance satellitaire, anti-braconnage acoustique et éducation interactive." />
-    <meta name="keywords" content="biodiversité Côte d'Ivoire, IA environnement, surveillance forêt, anti-braconnage, protection faune" />
-    <meta name="author" content="BioGuard-CI" />
+<!doctype html>
+<html lang="fr">
 
-    <meta property="og:title" content="BioGuard-CI | L'IA au service de la biodiversité ivoirienne" />
-    <meta property="og:description" content="Suite d'intelligence artificielle pour protéger la biodiversité de Côte d'Ivoire : surveillance satellitaire, anti-braconnage acoustique et éducation interactive." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+<head>
+  <!-- Métadonnées de base -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@bioguard_ci" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <!-- Titre et description SEO optimisés -->
+  <title>BioGuard-CI | L'IA au service de la biodiversité ivoirienne - Surveillance, Protection & Éducation</title>
+  <meta name="description"
+    content="Suite d'intelligence artificielle innovante pour protéger la biodiversité de Côte d'Ivoire : surveillance satellitaire anti-déforestation, détection acoustique du braconnage et éducation interactive. Développé par MEDEV GROUP.">
 
-    <!-- Google Fonts - Montserrat & Inter pour l'identité BioGuard-CI -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  </head>
+  <!-- Fallback image pour les chats/messageries -->
+  <link rel="image_src" href="https://bioguard-ci.medev-group.com/og-image.png" />
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bioguard-ci.medev-group.com/" />
+  <meta property="og:title" content="BioGuard-CI | L'IA au service de la biodiversité ivoirienne" />
+  <meta property="og:description"
+    content="Suite d'intelligence artificielle pour protéger la biodiversité de Côte d'Ivoire : surveillance satellitaire, anti-braconnage acoustique et éducation interactive. Une innovation 100% africaine." />
+  <meta property="og:image" content="https://bioguard-ci.medev-group.com/og-image.png" />
+  <meta property="og:image:alt" content="Logo BioGuard-CI avec forêt ivoirienne en arrière-plan" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="fr_CI" />
+  <meta property="og:site_name" content="BioGuard-CI" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://bioguard-ci.medev-group.com/" />
+  <meta name="twitter:title" content="BioGuard-CI | L'IA au service de la biodiversité ivoirienne" />
+  <meta name="twitter:description"
+    content="Suite d'intelligence artificielle pour protéger la biodiversité de Côte d'Ivoire : surveillance satellitaire, anti-braconnage acoustique et éducation interactive." />
+  <meta name="twitter:image" content="https://bioguard-ci.medev-group.com/og-image.png" />
+  <meta name="twitter:creator" content="@bioguard_ci" />
+  <meta name="twitter:site" content="@bioguard_ci" />
+
+  <!-- Mots-clés stratégiques -->
+  <meta name="keywords"
+    content="biodiversité Côte d'Ivoire, IA environnement, surveillance forêt, anti-braconnage, protection faune, OIPR, SODEFOR, déforestation, intelligence artificielle, conservation, éducation environnementale, MEDEV GROUP, innovation africaine, Détect'Forêt, EcoSentinel, BioGuard Junior">
+
+  <!-- Informations projet -->
+  <meta name="author" content="MEDEV GROUP - Innovation africaine">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="fr">
+  <meta name="revisit-after" content="7 days">
+
+  <!-- Géolocalisation Côte d'Ivoire -->
+  <meta name="geo.region" content="CI">
+  <meta name="geo.country" content="CI">
+  <meta name="geo.placename" content="Côte d'Ivoire">
+  <meta name="geo.position" content="7.5400;-5.5471">
+  <meta name="ICBM" content="7.5400, -5.5471">
+
+  <!-- Informations organisation -->
+  <meta property="article:publisher" content="https://medev-group.com">
+  <meta property="article:author" content="MEDEV GROUP">
+  <meta property="article:section" content="Environnement">
+  <meta property="article:tag" content="Intelligence Artificielle, Biodiversité, Conservation, Côte d'Ivoire">
+
+  <!-- Favicon et icônes -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Thème couleur BioGuard-CI -->
+  <meta name="theme-color" content="#2D5F3F">
+  <meta name="msapplication-TileColor" content="#2D5F3F">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+
+  <!-- Préchargement des ressources critiques -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts - Montserrat & Inter pour l'identité BioGuard-CI -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Schema.org JSON-LD pour BioGuard-CI -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["SoftwareApplication", "Product"],
+    "name": "BioGuard-CI",
+    "alternateName": "BioGuard Côte d'Ivoire",
+    "description": "Suite d'intelligence artificielle intégrée pour la protection de la biodiversité ivoirienne comprenant surveillance satellitaire, détection anti-braconnage et éducation interactive",
+    "url": "https://bioguard-ci.medev-group.com/",
+    "image": "https://bioguard-ci.medev-group.com/og-image.png",
+    "logo": "https://bioguard-ci.medev-group.com/logo.svg",
+    "applicationCategory": "Environmental Technology",
+    "operatingSystem": "Web, Mobile",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InDevelopment"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "MEDEV GROUP",
+      "url": "https://medev-group.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Abidjan",
+        "addressCountry": "CI"
+      },
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Edgar Kouassi",
+          "jobTitle": "CEO | Géomaticien & Ingénieur SIG"
+        },
+        {
+          "@type": "Person", 
+          "name": "Medi Fulgence",
+          "jobTitle": "CTO | Développeur Full Stack"
+        },
+        {
+          "@type": "Person",
+          "name": "Daniel Boua", 
+          "jobTitle": "CPO | Designer UI/UX"
+        },
+        {
+          "@type": "Person",
+          "name": "Sanlé Valent",
+          "jobTitle": "COO | Chef de projet IT"
+        },
+        {
+          "@type": "Person",
+          "name": "Tiéné Paul",
+          "jobTitle": "Lead IoT | Électrotechnicien"
+        }
+      ]
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Biodiversité",
+        "description": "Conservation de la faune et flore ivoirienne"
+      },
+      {
+        "@type": "Thing",
+        "name": "Intelligence Artificielle",
+        "description": "Technologies IA appliquées à l'environnement"
+      },
+      {
+        "@type": "Place",
+        "name": "Côte d'Ivoire",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CI"
+        }
+      }
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Gouvernement, ONG environnementales, Éducateurs, Écogardes"
+    },
+    "keywords": "biodiversité, intelligence artificielle, Côte d'Ivoire, surveillance, conservation, anti-braconnage, éducation environnementale",
+    "inLanguage": "fr",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Modules BioGuard-CI",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Détect'Forêt",
+            "description": "Surveillance satellitaire intelligente de la déforestation"
+          }
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "EcoSentinel",
+            "description": "Système anti-braconnage acoustique IoT"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication", 
+            "name": "BioGuard Junior",
+            "description": "Application éducative de reconnaissance d'espèces"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+  
+
+  <!-- Performance hints -->
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://bioguard-ci.medev-group.com/">
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

@@ -13,7 +13,10 @@ import {
   Heart,
   Mail,
   MessageCircle,
-  CheckCircle
+  MapPin,
+  Code,
+  Palette,
+  Cpu
 } from "lucide-react";
 
 const JoinAdventureSection = () => {
@@ -147,6 +150,128 @@ const JoinAdventureSection = () => {
         </Card>
       </div>
 
+      {/* Section Équipe MEDEV GROUP */}
+      <div className="container mx-auto px-6 mt-20">
+        <div className="bg-gradient-to-r from-muted/30 to-background rounded-3xl p-8 md:p-12">
+          {/* Header équipe */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-6">
+              <Users className="w-5 h-5 text-primary mr-2" />
+              <span className="text-primary font-medium text-sm">L'équipe derrière BioGuard-CI</span>
+            </div>
+
+            <h3 className="text-3xl md:text-4xl font-montserrat font-bold text-foreground mb-4">
+              Développé par <span className="text-gradient-forest">MEDEV GROUP</span>
+            </h3>
+
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Une entreprise fondée par cinq professionnels aux expertises complémentaires,
+              plaçant la technologie au service de l'impact social et de l'innovation durable.
+            </p>
+          </div>
+
+          {/* Membres de l'équipe - Grid compact */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {/* Edgar Kouassi */}
+            <div className="bg-white/50 backdrop-blur-sm rounded-xl p-4 border border-border/50">
+              <div className="flex items-center mb-3">
+                <div className="p-2 bg-primary/10 rounded-lg mr-3">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-montserrat font-semibold text-foreground">Edgar Kouassi</h4>
+                  <p className="text-xs text-primary">CEO | Géomaticien & Ingénieur SIG</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Spécialisé dans le traitement de données géospatiales et la télédétection.
+              </p>
+            </div>
+
+            {/* Medi Fulgence */}
+            <div className="bg-white/50 backdrop-blur-sm rounded-xl p-4 border border-border/50">
+              <div className="flex items-center mb-3">
+                <div className="p-2 bg-accent/10 rounded-lg mr-3">
+                  <Code className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-montserrat font-semibold text-foreground">Medi Fulgence</h4>
+                  <p className="text-xs text-accent">CTO | Développeur Full Stack</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Architecte logiciel en charge de la performance et sécurité des applications.
+              </p>
+            </div>
+
+            {/* Daniel Boua */}
+            <div className="bg-white/50 backdrop-blur-sm rounded-xl p-4 border border-border/50">
+              <div className="flex items-center mb-3">
+                <div className="p-2 bg-secondary/10 rounded-lg mr-3">
+                  <Palette className="w-5 h-5 text-secondary" />
+                </div>
+                <div>
+                  <h4 className="font-montserrat font-semibold text-foreground">Daniel Boua</h4>
+                  <p className="text-xs text-secondary">CPO | Designer UI/UX</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Conçoit des interfaces modernes et centrées sur l'utilisateur.
+              </p>
+            </div>
+
+            {/* Sanlé Valent */}
+            <div className="bg-white/50 backdrop-blur-sm rounded-xl p-4 border border-border/50">
+              <div className="flex items-center mb-3">
+                <div className="p-2 bg-primary/10 rounded-lg mr-3">
+                  <Users className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-montserrat font-semibold text-foreground">Sanlé Valent</h4>
+                  <p className="text-xs text-primary">COO | Chef de projet IT</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Coordonne les projets et définit la stratégie de communication digitale.
+              </p>
+            </div>
+
+            {/* Tiéné Paul */}
+            <div className="bg-white/50 backdrop-blur-sm rounded-xl p-4 border border-border/50">
+              <div className="flex items-center mb-3">
+                <div className="p-2 bg-accent/10 rounded-lg mr-3">
+                  <Cpu className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-montserrat font-semibold text-foreground">Tiéné Paul</h4>
+                  <p className="text-xs text-accent">Lead IoT | Électrotechnicien</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Solutions techniques IoT alliant matériel et logiciel connectés.
+              </p>
+            </div>
+
+            {/* Logo MEDEV placeholder */}
+            <div className="bg-gradient-forest rounded-xl p-4 flex items-center justify-center">
+              <div className="text-center text-white">
+                <div className="text-2xl font-montserrat font-bold mb-2">MEDEV</div>
+                <div className="text-sm opacity-90">GROUP</div>
+                <div className="text-xs opacity-70 mt-2">Innovation africaine</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Message de mission */}
+          <div className="text-center">
+            <p className="text-muted-foreground italic max-w-3xl mx-auto">
+              "Ensemble, nous avançons avec une vision orientée vers un changement concret,
+              porté par l'innovation et la quête de solutions durables qui façonnent l'avenir de l'Afrique."
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Contact direct */}
       <div className="text-center">
         <p className="text-muted-foreground mb-6">
@@ -173,6 +298,8 @@ const JoinAdventureSection = () => {
           </div>
         </div>
       </div>
+
+
 
       {/* Timer countdown effect (decorative) */}
       <div className="absolute bottom-8 right-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 hidden md:block">
