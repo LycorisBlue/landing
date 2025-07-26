@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background avec parallax */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
@@ -43,45 +43,44 @@ const Hero = () => {
           {/* Sous-titre */}
           <div className="mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <p className="text-lg md:text-xl font-inter leading-relaxed max-w-3xl mx-auto opacity-90">
-              Surveillez, protégez et éduquez grâce à notre suite d'outils intelligents 
-              qui révolutionnent la conservation de la faune et de la flore ivoiriennes
+              Un concept innovant de suite d'outils intelligents pour surveiller, protéger
+              et sensibiliser à la conservation de notre précieuse biodiversité
             </p>
           </div>
 
           {/* Statistiques impact */}
           <div className="grid grid-cols-3 gap-6 mb-12 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-accent mb-2 animate-counter-up">95%</div>
-              <div className="text-sm opacity-80">Précision IA</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2 animate-counter-up">3</div>
+              <div className="text-sm opacity-80">Modules prévus</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-secondary mb-2 animate-counter-up">10x</div>
-              <div className="text-sm opacity-80">Plus rapide</div>
+              <div className="text-3xl md:text-4xl font-bold text-secondary mb-2 animate-counter-up">1ère</div>
+              <div className="text-sm opacity-80">En Côte d'Ivoire</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary-glow mb-2 animate-counter-up">500+</div>
-              <div className="text-sm opacity-80">Jeunes formés</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary-glow mb-2 animate-counter-up">∞</div>
+              <div className="text-sm opacity-80">Potentiel impact</div>
             </div>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <Button className="btn-earth text-lg px-8 py-4 group">
-              Demander une démo
+              Découvrir le concept
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 text-lg px-8 py-4 group">
               <Play className="mr-2 w-5 h-5" />
-              Voir en action
+              Vision du projet
             </Button>
           </div>
-
-          {/* Indicateur de scroll */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
-            </div>
-          </div>
+        </div>
+      </div>
+      {/* Indicateur de scroll */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
