@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BioGuard-CI Design System - Biodiversité ivoirienne
+All colors MUST be HSL - Terre de Côte d'Ivoire palette
+*/
+
+@layer base {
+  :root {
+    /* Background colors - Natural whites and earth tones */
+    --background: 0 0% 100%;
+    --foreground: 150 30% 15%;
+
+    /* Card surfaces - Subtle nature tints */
+    --card: 0 0% 100%;
+    --card-foreground: 150 30% 15%;
+
+    /* Overlay elements */
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 30% 15%;
+
+    /* Primary - Forêt ivoirienne green */
+    --primary: 150 50% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 150 60% 45%;
+
+    /* Secondary - Canopée green */
+    --secondary: 120 45% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted tones - Natural grays */
+    --muted: 150 15% 95%;
+    --muted-foreground: 150 15% 45%;
+
+    /* Accent - Terre de Côte d'Ivoire orange */
+    --accent: 20 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and inputs */
+    --border: 150 20% 90%;
+    --input: 150 20% 95%;
+    --ring: 150 50% 35%;
+
+    /* Nature-inspired gradients */
+    --gradient-forest: linear-gradient(135deg, hsl(150 50% 35%), hsl(150 60% 45%));
+    --gradient-earth: linear-gradient(135deg, hsl(20 100% 60%), hsl(35 85% 55%));
+    --gradient-canopy: linear-gradient(180deg, hsl(120 45% 55%), hsl(150 50% 35%));
+    --gradient-sunrise: linear-gradient(90deg, hsl(20 100% 60%), hsl(45 90% 65%));
+
+    /* Sophisticated shadows */
+    --shadow-forest: 0 10px 30px -10px hsl(150 50% 35% / 0.3);
+    --shadow-earth: 0 8px 25px -8px hsl(20 100% 60% / 0.25);
+    --shadow-soft: 0 4px 20px -4px hsl(150 30% 15% / 0.1);
+
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* BioGuard-CI Custom Components */
+  .btn-forest {
+    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl;
+    background: var(--gradient-forest);
+    box-shadow: var(--shadow-forest);
+  }
+
+  .btn-earth {
+    @apply bg-gradient-to-r from-accent to-orange-500 text-accent-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105;
+    background: var(--gradient-earth);
+    box-shadow: var(--shadow-earth);
+  }
+
+  .card-nature {
+    @apply bg-card border border-border rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .text-gradient-forest {
+    background: var(--gradient-forest);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-earth {
+    background: var(--gradient-earth);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+  }
+
+  .parallax-forest {
+    background: var(--gradient-canopy);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(1deg); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes fade-in-up {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes counter-up {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px) scale(0.8); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+  }
+}
